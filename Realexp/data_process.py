@@ -149,7 +149,7 @@ if __name__ == "__main__":
             depth_image = pickle.load(fin)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
 
-        # gte distance
+        # get distance
         img, distance = get_distance(model, color_image, depth_image, colors)
         # get pos
         pos_x, pos_y = get_pos(pos_timestamp_list, pos_list, frame_timestamp, opt.start_pos, opt.end_pos)
